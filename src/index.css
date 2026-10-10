@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+:root {
+  /* Pastel Care / Maternal & Child Health Color Palette */
+  --palette-c1-blush-light: #FFEAEA;
+  --palette-c2-blush-pink: #FFCCD5;
+  --palette-c3-coral-accent: #FF9AA2;
+  --palette-c4-mint-aqua: #B5EAEA;
+  --palette-c5-mint-light: #E0F9F8;
+  --palette-coral-dark: #C94C58;
+  --palette-coral-hover: #FF7B86;
+  --palette-mint-dark: #1F7A78;
+}
+
+/* Theme overrides when coral-mint is active */
+[data-theme="coral-mint"] {
+  --color-primary: var(--palette-c3-coral-accent);
+  --color-primary-hover: var(--palette-coral-hover);
+  --color-accent-mint: var(--palette-c4-mint-aqua);
+  --color-accent-mint-light: var(--palette-c5-mint-light);
+  --color-bg-blush: var(--palette-c1-blush-light);
+  --color-bg-pink: var(--palette-c2-blush-pink);
+  --color-text-coral: var(--palette-coral-dark);
+  --color-text-mint: var(--palette-mint-dark);
+}
+
+/* Universal UI component mapping to CSS variables under coral-mint theme */
+[data-theme="coral-mint"] .theme-header-gradient {
+  background: linear-gradient(135deg, var(--palette-c1-blush-light) 0%, var(--palette-c2-blush-pink) 30%, var(--palette-c3-coral-accent) 65%, var(--palette-c4-mint-aqua) 88%, var(--palette-c5-mint-light) 100%);
+}
+
+[data-theme="coral-mint"] .theme-accent-btn,
+[data-theme="coral-mint"] .bg-blue-600 {
+  background-color: var(--palette-c3-coral-accent) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="coral-mint"] .theme-accent-btn:hover,
+[data-theme="coral-mint"] .hover\:bg-blue-700:hover,
+[data-theme="coral-mint"] .bg-blue-600:hover {
+  background-color: var(--palette-coral-hover) !important;
+}
+
+[data-theme="coral-mint"] .theme-accent-badge,
+[data-theme="coral-mint"] .bg-blue-50 {
+  background-color: var(--palette-c1-blush-light) !important;
+  color: var(--palette-coral-dark) !important;
+}
+
+[data-theme="coral-mint"] .text-blue-600,
+[data-theme="coral-mint"] .text-blue-700,
+[data-theme="coral-mint"] .text-blue-800 {
+  color: var(--palette-coral-dark) !important;
+}
+
+[data-theme="coral-mint"] .border-blue-200,
+[data-theme="coral-mint"] .border-blue-100 {
+  border-color: var(--palette-c2-blush-pink) !important;
+}
+
+[data-theme="coral-mint"] .hover\:bg-blue-50:hover {
+  background-color: var(--palette-c1-blush-light) !important;
+}
+
+[data-theme="coral-mint"] .hover\:bg-blue-100:hover {
+  background-color: var(--palette-c2-blush-pink) !important;
+}
+
+[data-theme="coral-mint"] .theme-mint-badge {
+  background-color: var(--palette-c5-mint-light) !important;
+  color: var(--palette-mint-dark) !important;
+  border-color: var(--palette-c4-mint-aqua) !important;
+}
+
+[data-theme="coral-mint"] input:focus,
+[data-theme="coral-mint"] textarea:focus,
+[data-theme="coral-mint"] select:focus {
+  border-color: var(--palette-c3-coral-accent) !important;
+  --tw-ring-color: rgba(255, 154, 162, 0.35) !important;
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  /* Monospace tabular figures for all data tables, numbers, and dates */
+  .font-tabular {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media print {
+  /* Hide non-printable elements like sidebars, buttons, alerts */
+  .no-print {
+    display: none !important;
+  }
+  
+  /* Ensure print document takes full width without scrollbars */
+  body, #root, main {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .printable-area {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 20px !important;
+    box-shadow: none !important;
+    border: 1px solid #000 !important;
+  }
+}
+
+@media screen {
+  .print-only {
+    display: none !important;
+  }
+}

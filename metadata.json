@@ -1,0 +1,8 @@
+{
+  "name": "Barangay Immunization Record and Monitoring System",
+  "description": "A responsive, accessible web system for Barangay Health Workers (BHWs), nurses, and administrators to track patient immunization records, monitor due/missed vaccinations, log follow-ups, and generate official health reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

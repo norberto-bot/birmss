@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#1e40af" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+  </defs>
+  <!-- Background Circle / Squircle -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  
+  <!-- Outer Gold Ring -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="url(#goldGrad)" stroke-width="12" stroke-dasharray="16 8" />
+  
+  <!-- Inner White Disc -->
+  <circle cx="256" cy="256" r="160" fill="#ffffff" />
+  
+  <!-- Red Health Cross -->
+  <path d="M226 140 h60 v76 h76 v60 h-76 v76 h-60 v-76 h-76 v-60 h76 z" fill="#dc2626" />
+  
+  <!-- Laurel / Nurturing Hands base -->
+  <path d="M176 340 c20 30 60 40 80 40 s60 -10 80 -40 c-25 15 -55 20 -80 20 s-55 -5 -80 -20 z" fill="#1d4ed8" />
+
+  <!-- Syringe / Vaccine emblem -->
+  <circle cx="256" cy="246" r="26" fill="#ffffff" />
+  <circle cx="256" cy="246" r="16" fill="#1d4ed8" />
+</svg>
